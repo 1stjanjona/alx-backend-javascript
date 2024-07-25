@@ -13,10 +13,6 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
         }));
 
     const fileData = await uploadPhoto(fileName)
-        .then((data) => ({
-            status: 'fulfilled',
-            value: data,
-        }))
         .catch((err) => ({
             status: 'rejected',
             value: err.toString(),
